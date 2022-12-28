@@ -1,0 +1,6 @@
+TODO:
+- support negative heights (they might actually make sense after all -- what if
+  the wall is on a hill, or at the side of a cliff?)
+- use Katrina's 'approvals' gem to exercise Visualizer ?
+
+

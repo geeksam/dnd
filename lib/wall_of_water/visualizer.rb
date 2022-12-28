@@ -77,16 +77,10 @@ module WallOfWater
     end
 
       def combine_labels(labels)
-        labels.each_cons(2) do |a,b|
-          case
-          when a.length == 1
-            a << " "
-          when a.length == 3 && b == "  "
-            i = labels.index(a) + 1
-            labels[i] = " "
-          end
-        end
-        labels.join
+        labels.join.gsub(/(\d+)(\s+)/) {
+          spaces = 10 - $1.length
+          "#{$1}#{' ' * spaces}"
+        }
       end
 
 
